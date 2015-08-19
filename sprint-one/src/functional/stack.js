@@ -11,7 +11,10 @@ var Stack = function(){
   };
 
   someInstance.pop = function(){
-    count --;
+    if (count) {
+      count --;
+    }
+    
   };
 
   someInstance.size = function(){
