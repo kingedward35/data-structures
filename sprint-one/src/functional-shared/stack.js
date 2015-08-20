@@ -1,16 +1,3 @@
-var _ = {};
-
-_.extend = function(obj) {
-  each(slice.call(arguments, 1), function(source) {
-    if (source) {
-      for (var prop in source) {
-        obj[prop] = source[prop];
-      }
-    }
-  });
-  return obj;
-};
-
 var Stack = function() {
   var someInstance = {};
   someInstance.count = 0;
@@ -38,5 +25,3 @@ stackMethods.pop = function () {
 stackMethods.size = function() {
   return this.count;
 };
-
-
