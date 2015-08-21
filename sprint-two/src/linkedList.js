@@ -1,17 +1,16 @@
 var LinkedList = function(){
-  console.log("New test starting");
   var list = {};
   list.head = null;
   list.tail = null;
 
   list.addToTail = function(value){
-    var newTail = Node(value);
+    var node = Node(value);
     if (list.tail) {
-     list.tail.next = newTail;
+     list.tail.next = node;
     } else {
-      list.head = newTail;
+      list.head = node;
     }
-    list.tail = newTail;
+    list.tail = node;
   };
 
   list.removeHead = function(){
