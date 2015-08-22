@@ -3,7 +3,7 @@ var Tree = function(value){
   var newTree = {};
   newTree.value = value;
   _.extend(newTree, treeMethods);
-  newTree.children = [];  // fix me
+  newTree.children = [];
   return newTree;
 };
 
@@ -24,9 +24,10 @@ treeMethods.contains = function(target){
     var output = _.reduce(this.children, function(result, child) {
       return result || child.contains(target);
     }, false);
-    if (output) {
-      return true;
-    }
+    // if (output) {
+    //   return true;
+    // }
+    return true && output;
   }
   return false;
 };
@@ -35,3 +36,7 @@ treeMethods.contains = function(target){
 /*
  * Complexity: What is the time complexity of the above functions?
  */
+
+// Tree: constant
+// addChild: constant
+// contains: linear
