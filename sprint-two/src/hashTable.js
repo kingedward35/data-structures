@@ -37,7 +37,9 @@ HashTable.prototype.remove = function(k){
   var pair = _.find(bucket, function(pair) {
     return pair[0] === k;
   });
-  pair[1] = null;
+  if (pair) {
+    pair[1] = null;
+  }
 };
 
 
@@ -45,3 +47,8 @@ HashTable.prototype.remove = function(k){
 /*
  * Complexity: What is the time complexity of the above functions?
  */
+
+ // HashTable: constant
+ // insert: constant/linear?
+ // retrieve: linear
+ // remove: linear
