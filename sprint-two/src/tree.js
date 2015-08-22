@@ -1,5 +1,4 @@
 var Tree = function(value){
-  console.log('building new tree');
   var newTree = {};
   newTree.value = value;
   _.extend(newTree, treeMethods);
@@ -24,10 +23,9 @@ treeMethods.contains = function(target){
     var output = _.reduce(this.children, function(result, child) {
       return result || child.contains(target);
     }, false);
-    // if (output) {
-    //   return true;
-    // }
-    return true && output;
+    if (output) {
+      return true;
+    }
   }
   return false;
 };
