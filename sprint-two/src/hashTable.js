@@ -49,6 +49,6 @@ HashTable.prototype.remove = function(k){
  */
 
  // HashTable: constant
- // insert: constant/linear?
- // retrieve: linear
- // remove: linear
+ // insert: constant
+ // retrieve: constant
+ // remove: constant
